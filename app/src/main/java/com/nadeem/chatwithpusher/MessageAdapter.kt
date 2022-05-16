@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.nadeem.chatwithpusher.model.Message
 
 private const val VIEW_TYPE_MY_MESSAGE = 1
 private const val VIEW_TYPE_OTHER_MESSAGE = 2
@@ -35,7 +36,7 @@ class MessageAdapter (private val context: Context) : RecyclerView.Adapter<Messa
         holder?.bind(message)
     }
 
-    override fun getItemViewType(position: Int): Int {
+/*    override fun getItemViewType(position: Int): Int {
         val message = messages.get(position)
 
         return if(App.user == message.user) {
@@ -44,7 +45,7 @@ class MessageAdapter (private val context: Context) : RecyclerView.Adapter<Messa
         else {
             VIEW_TYPE_OTHER_MESSAGE
         }
-    }
+    }*/
 
     override fun getItemCount(): Int {
         return messages.size
@@ -56,7 +57,7 @@ class MessageAdapter (private val context: Context) : RecyclerView.Adapter<Messa
 
         override fun bind(message: Message) {
             messageText.text = message.message
-            timeText.text = DateUtils.fromMillisToTimeString(message.time)
+//            timeText.text = DateUtils.fromMillisToTimeString(message.time)
         }
     }
 
@@ -67,11 +68,11 @@ class MessageAdapter (private val context: Context) : RecyclerView.Adapter<Messa
 
         override fun bind(message: Message) {
             messageText.text = message.message
-            userText.text = message.user
-            timeText.text = DateUtils.fromMillisToTimeString(message.time)
+//            userText.text = message.user
+//            timeText.text = DateUtils.fromMillisToTimeString(message.time)
         }
     }
 }
 open class MessageViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    open fun bind(message:Message) {}
+    open fun bind(message: Message) {}
 }

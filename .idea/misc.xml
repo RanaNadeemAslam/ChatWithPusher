@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1935185185185185" />
         <entry key="app/src/main/res/drawable/my_message_bubble.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/other_message_bubble.xml" value="0.203" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.4036458333333333" />
